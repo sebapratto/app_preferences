@@ -19,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etValue = findViewById(R.id.etPrefer);
-        SharedPreferences preferencias = getSharedPreferences("data", Context.MODE_PRIVATE);
-        etValue.setText(preferencias.getString("value",""));
+        SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        etValue.setText(preferencias.getString("valor",""));
     }
 
     public void Guardar(View view){
-        SharedPreferences preferencias = getSharedPreferences("data", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editando = preferencias.edit();
-        editando.putString("value",etValue.getText().toString());
+        SharedPreferences prefe = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editando = prefe.edit();
+        editando.putString("valor",etValue.getText().toString());
+        editando.apply();
         Toast.makeText(this, "Guardado exitosamente...", Toast.LENGTH_SHORT).show();
-        etValue.setText("");
     }
 
 }
