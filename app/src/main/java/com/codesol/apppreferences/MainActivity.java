@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferencias = getSharedPreferences("data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editando = preferencias.edit();
         editando.putString("value",etValue.getText().toString());
+        Toast.makeText(this, "Guardado exitosamente...", Toast.LENGTH_SHORT).show();
+        etValue.setText("");
     }
-
 
 }
