@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         etValue.setText(preferencias.getString("value",""));
     }
 
+    public void Guardar(View view){
+        SharedPreferences preferencias = getSharedPreferences("data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editando = preferencias.edit();
+        editando.putString("value",etValue.getText().toString());
+    }
 
 
 }
