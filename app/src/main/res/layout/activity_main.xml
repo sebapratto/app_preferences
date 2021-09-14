@@ -8,18 +8,18 @@
 
     <EditText
         android:id="@+id/etPrefer"
-        android:layout_width="302dp"
-        android:layout_height="37dp"
+        android:layout_width="301dp"
+        android:layout_height="44dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="136dp"
         android:ems="10"
         android:hint="@string/txt_prefere"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/button"
